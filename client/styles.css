@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/3c/35/14/exterior.jpg?w=700&h=-1&s=1')
+    no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  width: 900px;
+  max-width: 95%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(60px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.form-card
+ {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h1 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+  opacity: 0.85;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.switch-field {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.switch-field input[type="radio"] {
+  display: none;
+}
+
+.switch-field label {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.switch-field input:checked + label {
+  background: #00b9b3;
+  color: #fff;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background: #00b9b3;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #009e9a;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+.marker {
+  width: 15px;
+  height: 15px;
+  background: #00b9b3;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 10px #00b9b3;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .map-card {
+    height: 300px;
+  }
+}
